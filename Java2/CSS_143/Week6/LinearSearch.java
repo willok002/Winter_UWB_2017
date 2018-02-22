@@ -2,33 +2,55 @@
 /**
  * Write a description of class LinearSearch here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Will O'Keeffe
+ * @version 01/12/2018
  */
-public class LinearSearch{
+public class LinearSearch extends SearchAlgorithm{
     
     /**
      * Constructor for objects of class LinearSearch
+     * no pram taken
      */
     public LinearSearch()
     {
-        
     }
-
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * search searches array for target from start to target found (iterative)
+     *  if not found we are at end of arrray, we throw new ItemNotFoundException
+     * 
+     *  @param array of words to search
+     *  @param target word
+     *  
+     *  @return index in array of target if found, throws exception if not found
      */
     public int search(String [] toSearch, String target) throws ItemNotFoundException
     {
         for(int i = 0; i < toSearch.length; i++){
-            //incrementCount();
+            incrementCount();
             if(toSearch[i].equals(target))
                 return i;  
         }
-        throw new ItemNotFoundException(target + " is not in provided list.");
-        //return -1;//makes compiler happy, will not reach here
+        //if we get here target is not in list
+        throw new ItemNotFoundException(target + " is not in provided directory.");
+    }
+    /**
+     * search searches array for target from start to target found (recursive)
+     *  if not found we are at end of arrray, we throw new ItemNotFoundException
+     * 
+     *  @param array of words to search
+     *  @param target word
+     *  
+     *  @return index in array of target if found, throws exception if not found
+     */
+    public int recSearch(String [] toSearch, String target) throws ItemNotFoundException{
+        if(toSearch[getCount()].equals(target)){
+            incrementCount();
+            return getCount();
+        }
+        else{
+            incrementCount();
+            recSearch(toSearch, target);
+        }
+        throw new ItemNotFoundException(target + " is not in provided directory.");
     }
 }
