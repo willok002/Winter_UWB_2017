@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class LinearSearch here.
+ *  LinearSearc.java provides iterative and recursive options for a linear search
  *
  * @author Will O'Keeffe
  * @version 01/12/2018
