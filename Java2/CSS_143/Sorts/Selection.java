@@ -1,24 +1,12 @@
 
 /**
- * Write a description of class Selection here.
+ * Selection.java contains primitave and non-primative selection sorts
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Will O'Keeffe
+ * @version 03/09/2018
  */
 public class Selection
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Selection
-     */
-    public Selection()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
     /**
      * Selection sort for primitive array
      *
